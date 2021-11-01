@@ -2,7 +2,7 @@ printf "1 - Comprar \n2 - Vendar \n3 - Alterar preço de restauro \n4 - Alterar 
 read userInput
 
 #Ciclo para verificar de o input do utilizador é válido
-while [[ $userInput<0 || $userInput>8 ]]
+while [[ $userInput<0 || $userInput>7 ]]
 do
     echo -n "Numero inserido inválido! Insira novo numero: " 
     read userInput
