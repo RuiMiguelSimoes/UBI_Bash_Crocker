@@ -1,1 +1,2 @@
 Marca:Modelo:Matrícula:Ano de Fabrico:tipo:Preço de compra:Data de compra:Custo de Restauro:Valorização
+: : : : : : : 
