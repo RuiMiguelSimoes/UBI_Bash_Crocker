@@ -1,4 +1,4 @@
-printf "1 - Comprar \n2 - Vendar \n3 - Alterar preço de restauro \n4 - Alterar dados \n5 - Visualzar automóveis \n6 - Gestão deBase de Dados \n7 - Relatórios \n\n0 - Sair do programa\n\nIntroduza a opção> "
+printf "1 - Comprar \n2 - Vender \n3 - Alterar preço de restauro \n4 - Alterar dados \n5 - Visualizar automóveis \n6 - Gestão de Base de Dados \n7 - Relatórios \n\n0 - Sair do programa\n\nIntroduza a opção> "
 read userInput
 
 #Ciclo para verificar de o input do utilizador é válido
@@ -15,7 +15,7 @@ case $userInput in
     ./comprar.sh
     ;;
     2)  printf "Escolheu a opção: 2\n"
-
+    ./Vendar
     ;;
 
     3)  printf "Escolheu a opção: 3\n"
