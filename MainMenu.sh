@@ -15,7 +15,7 @@ case $userInput in
     ./comprar.sh
     ;;
     2)  printf "Escolheu a opção: 2\n"
-    ./Vendar
+    ./Vender.sh
     ;;
 
     3)  printf "Escolheu a opção: 3\n"
@@ -41,6 +41,6 @@ case $userInput in
    
    ;;
     #Caso o input seja aceite pelo ciclo while mas não pelo comando case
-    *) echo "O numero inserido é inválido! Programa a terminar..."
+    *) echo "   O numero inserido é inválido! Programa a terminar..."
    ;;
 esac

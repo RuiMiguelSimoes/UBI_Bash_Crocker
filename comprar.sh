@@ -7,6 +7,10 @@ read marcaAutComp
 echo -n "Insira o modelo do automóvel (Ex: Clio, Golf, 320d) : "
 read modeloAutComp
 
+echo -n "Insira o tipo do automóvel (Ex: SUV, Vintage, Sedan) : "
+read tipoAutomovel
+
+
 echo -n "Insira a matrícula do automóvel (Ex: 22FG02) : "
 read matriculaAutComp
 
@@ -23,49 +27,48 @@ done
 echo -n "Insira a o ano de fabrico (Ex: 1999) : "
 read anoFrabrico
 
-echo -n "Insira o preço de compra do automóvel (Ex: 5000€)"
+echo -n "Insira o preço de compra do automóvel (Ex: 5000€) : "
 read preco
 
 #data de compra
 dataCompra=$(date +%d-%m-%y)
 
-echo -n "Insira o custo de restauto (Ex 2499€)"
+echo -n "Insira o custo de restauto (Ex 2499€) : "
 read custoRestauro
 
-echo -n "Insira a valorização do automóvel restaurado (Ex 15000€) "
+echo -n "Insira a valorização do automóvel restaurado (Ex 15000€) : "
 read valor
 
 #move os dados para um ficheiro temporário 
-echo $marcaAutComp : $modeloAutComp : $matriculaAutComp : $anoFrabrico : $preco : $dataCompra : $custoRestauro : $valor > carrosCompradosTemp.txt 
-
-#devolve os dados para o ficheiro de carros comprados
-mv  carrosCompradosTemp.txt carrosComprados.txt
-
+echo $marcaAutComp : $modeloAutComp : $tipoAutomovel : $matriculaAutComp : $anoFrabrico : $preco : $dataCompra : $custoRestauro : $valor >> carrosComprados.txt 
 
 
 
 #move os dados para um ficheiro temporário 
-echo $marcaAutComp : $modeloAutComp : $matriculaAutComp : $anoFrabrico : $preco : $dataCompra : $custoRestauro : $valor > carrosCompradosTemp.txt 
-
-#devolve os dados para o ficheiro dos carros em stock
-mv  carrosCompradosTemp.txt carrosStock.txt
+echo $marcaAutComp : $modeloAutComp : $matriculaAutComp : $anoFrabrico : $preco : $dataCompra : $custoRestauro : $valor >> carrosStock.txt 
 
 
 
-
-printf "\n\n1 - Menu principal\n2 - Terminar"
+#o utilizador tem a opção de voltar ao menu principal ou terminal o programa
+printf "\n\n1 - Menu principal\n2 - Terminar\n> "
 read userInput
 
-if [[$userInput<1 || $userInput>2]]
-then
-    printf "\n\nLamentamos, valor inválido!\n1 - Menu principal\n2 - Terminar"
-read userInput
-fi
 
-case $userInput in 
+#verifica se o input do loop é válido
+while [[ $userInput < 1 || $userInput >2 ]] 
+do
+    printf "\n\nValor inválido, insira um dos valores:\n1 - Menu principal\n2 - Terminar\n> "
+    read userInput
+done
 
-    1)./MainMenu.sh
 
-    2) exit
+#redireciona o utilizador para o menu principal ou termina o programa
+case $userInput in
 
+    1)  printf "Escolheu a opção: 1\n"
+    ./MainMenu.sh
+    ;;
+    2)  printf "Escolheu a opção: 2\nPrograma Terminado..."
+    exit 
+    ;;
 esac
