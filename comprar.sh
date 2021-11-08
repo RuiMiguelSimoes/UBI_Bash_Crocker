@@ -39,13 +39,12 @@ read custoRestauro
 echo -n "Insira a valorização do automóvel restaurado (Ex 15000€) : "
 read valor
 
-#move os dados para um ficheiro temporário 
+#move os dados para o ficheiro carrosComprados.txt  
 echo $marcaAutComp : $modeloAutComp : $tipoAutomovel : $matriculaAutComp : $anoFrabrico : $preco : $dataCompra : $custoRestauro : $valor >> carrosComprados.txt 
 
 
-
-#move os dados para um ficheiro temporário 
-echo $marcaAutComp : $modeloAutComp : $matriculaAutComp : $anoFrabrico : $preco : $dataCompra : $custoRestauro : $valor >> carrosStock.txt 
+#move os dados para o ficheiro carrosStock.txt  
+echo $marcaAutComp : $modeloAutComp : $tipoAutomovel  : $matriculaAutComp : $anoFrabrico : $preco : $dataCompra : $custoRestauro : $valor >> carrosStock.txt 
 
 
 

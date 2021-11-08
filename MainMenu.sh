@@ -19,22 +19,23 @@ case $userInput in
     ;;
 
     3)  printf "Escolheu a opção: 3\n"
-
+    ./atualizarPrecoRestauro.sh
     ;;
 
     4)  printf "Escolheu a opção: 4\n"
+    ./alterarDados.sh
     ;;
     
     5)  printf "Escolheu a opção: 5\n"
-    ./teste.sh
+    ./VisualizarAutomoveis.sh
     ;;
 
     6)  printf "Escolheu a opção: 6\n"
-    ./teste.sh
+    ./.sh
     ;;
 
     7)  printf "Escolheu a opção: 7\n"
-    ./teste.sh
+    ./
     ;;
 
     0) printf "Programa Terminado\n"
