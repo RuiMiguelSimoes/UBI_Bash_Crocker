@@ -11,3 +11,5 @@ read input
 
 grep -v "$input" carrosStock.txt >> temp.txt
 mv temp.txt carrosStock.txt
+
+./endMenu.sh

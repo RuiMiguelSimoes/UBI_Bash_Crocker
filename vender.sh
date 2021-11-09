@@ -15,21 +15,4 @@ grep $inputMatricula carrosStock.txt > carrosVendidos.txt
 grep -v $inputMatricula carrosStock.txt > temp.txt
 mv temp.txt carrosStock.txt
 
-
-#o utilizador tem a opção de voltar ao menu principal ou terminal o programa
-printf "\n\n1 - Menu principal\n2 - Terminar"
-read userInput
-
-if [[$userInput<1 || $userInput>2]]
-then
-    printf "\n\nLamentamos, valor inválido!\n1 - Menu principal\n2 - Terminar"
-read userInput
-fi
-
-case $userInput in 
-
-    1)./MainMenu.sh
-
-    2) exit
-
-esac
+./endMenu.sh

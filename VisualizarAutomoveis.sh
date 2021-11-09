@@ -6,25 +6,33 @@ case $userInput in
 
 1) printf "Escolheu a opção: 1\n"
   awk -F: '{print $5}' carrosStock.txt
+  ./VisualizarAutomoveis.sh
 ;;
 
 2) printf "Escolheu a opção: 2\n"
   awk -F: '{print $1}' carrosStock.txt
+  ./VisualizarAutomoveis.sh
 ;;
 
 3) printf "Escolheu a opção 3\n"
   awk -F: '{print $2}' carrosStock.txt
+  ./VisualizarAutomoveis.sh
 ;;
 
 4) printf "Escolheu a opção 4\n"
   awk -F: '{print $4}' carrosStock.txt
+  ./VisualizarAutomoveis.sh
 ;;
 
 5) printf "Escolheu a opção 5\n"
   awk -F: '{print $5}' carrosStock.txt
+  ./VisualizarAutomoveis.sh
 ;;
 
 0) printf "Escolheu a opção 0\n\n\n"
     ./MainMenu.sh
 ;;
 esac
+
+
+./VisualizarAutomoveis.sh
